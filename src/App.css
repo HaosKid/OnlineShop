@@ -442,3 +442,23 @@ footer{
 .AdsItemDesc{
     margin-top: 0;
 }
+                                                    /* ProductPage */
+.ProductPagePathBarContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 25px 70px;
+
+}
+.ProductPageParagraf{
+    display: flex;
+    align-items: center;
+    color: #9F9F9F;
+    gap: 10px;
+}
+.filterHr{
+    width: 0;
+    border: 1px solid #000000;
+}

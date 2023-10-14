@@ -1,5 +1,6 @@
 import './App.css'
-import ShopPage from './Components/Shop/ShopPage'
+import ProductPage from './Components/ProductPage/ProductPage'
+
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <>
-      <ShopPage />
+      <ProductPage />
     </>
   )
 }
