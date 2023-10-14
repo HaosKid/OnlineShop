@@ -462,3 +462,119 @@ footer{
     width: 0;
     border: 1px solid #000000;
 }
+
+                    /* product */
+.ProductPageProductContainer{
+    display: flex;
+    gap: 100px;
+    margin: 0 60px;
+}
+.ProductImgCarousel{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ProductCarouselItem{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    width: fit-content;
+}
+.ProductContainerLeft{
+    display: flex;
+    gap: 50px;
+}
+.ProductImgShow{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    max-height: 370px;
+}
+.ProductHead{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+.productPrice{
+    color: #9F9F9F;
+    font-size: 2rem;
+    margin: 5px 0;
+}
+.ProductLeftUnderHead{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.ProductLeftHr{
+    border: 1px solid #9F9F9F;
+    height: 3vh;
+}
+.ProductLeftRevCount{
+    color: #9F9F9F;
+}
+.ProductDescLeft{
+    margin: 5px 0;
+    line-height: 27px;
+}
+.ProductSize{
+    color: #9F9F9F;
+    margin: 5px 0;
+}
+.ProductSizeButtonContainer{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.ProductSizeButton{
+    border: none;
+    border-radius: 10px;
+    background-color: #FAF4F4;
+    padding: 10px;
+}
+.Sel{
+    background-color: #FBEBB5;
+}
+.ProductColorContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ProductColor{
+    border-radius: 50%;
+    background-color: #000000;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 2px;
+    margin-top: 10px;
+}
+.ProductCountContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+}
+.ProductCountContainer > button{
+    background-color: transparent;
+    border: none;
+}
+.ProductCountAddCart{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+}
+.AddToCartButton{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+.margin40{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    border: 1px solid #D9D9D9;
+}
+.ProductOtherDetailsItem{
+    margin: 2px;
+    color: #9F9F9F;
+}
