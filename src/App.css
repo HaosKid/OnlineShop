@@ -97,6 +97,116 @@ html, body, #root{
     border: none;
     margin-top: 20px;
 }
+/* Search */
+
+.SearchText{
+    position: relative;
+    top: -7px;
+    background-color: transparent;
+    border: none;
+    width: 0;
+    transition: width 0.4s;
+}
+.SearchText:focus{
+    outline: none;
+    width: 150px;
+}
+.searchContainer:hover > .SearchText{
+    width: 150px;
+}
+/* DropDownMenu */
+.CartDropDownMenuContainer{
+
+}
+.CartDropDownMenuButton{
+    background-color: transparent;
+    border: none;
+}
+.CartDropDownMenu{
+    position: absolute;
+    right: -460px;
+    top: -110px;
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+    width: 0;
+}
+.CartDropDownMenuContainer > .CartDropDownMenuButton:focus + .CartDropDownMenu, .CartDropDownMenu:hover{
+    opacity: 1;
+    transform: translateY(0);
+    width: 25vw;
+    height: 500px;
+    top: 0;
+    right: 0;
+    
+}
+.DropDownMenuTop{
+    position: relative;
+}
+.DropDownMenuSacosaImg{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+.hr90{
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    margin: 30px 0;
+
+}
+.CartDropDownMenuMiddle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.CartDropDownItemImg{
+    background-color: #D9D9D9;
+    
+}
+.CartDropDownCheckBox{
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+}
+.CartDropDownMenuDown{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CartDownSubTotal{
+    display: flex;
+    justify-content: space-around;
+    gap: 90px;
+}
+.hr100{
+    width: 110%;
+    margin: 25px 0 50px;
+
+}
+.CartDownButtons{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+
+}
+.CartButtonDown{
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
                         /* Highlight */
 .MainPageHighlightContainer{
     background-color: #F5F5F5;

@@ -29,7 +29,7 @@ export default function ProductPageProduct() {
             </div>
             <div className="ProductContainerRight">
                 <h1 className='ProductHead'>MIRAGE MR-AT172 285/65</h1>
-                <p className='productPrice'>Rs. 50,000.00</p>
+                <p className='productPrice'>Price: 250€</p>
                 <div className="ProductLeftUnderHead">
                     <p><b>Shope: Tire House</b></p>
                     <div className="ProductLeftHr"></div>
