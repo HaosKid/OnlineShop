@@ -1,10 +1,9 @@
 import Arrow from '../../assets/ArrowRight.svg'
 
+export default function CheckoutHeader(){
 
-
-export default function MyAccountHeader(){
-    return(
-        <header className="MyAccountHeaderContainer MyAccountBg">
+    return (
+        <header className="MyAccountHeaderContainer CheckoutBg">
             <div className="MyAccountHeaderTitle">
                 <h1 className="MyAccountHeader">
                     My Account
@@ -14,7 +13,7 @@ export default function MyAccountHeader(){
                         Home 
                     </b>
                     <img src={Arrow} alt="Arrow image" />
-                    My account
+                    Checkout
                 </p>
             </div>
         </header>

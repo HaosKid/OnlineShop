@@ -123,6 +123,7 @@ html, body, #root{
     border: none;
 }
 .CartDropDownMenu{
+    z-index: 99;
     position: absolute;
     right: -460px;
     top: -110px;
@@ -143,6 +144,7 @@ html, body, #root{
     top: 0;
     right: 0;
     
+    
 }
 .DropDownMenuTop{
     position: relative;
@@ -151,6 +153,7 @@ html, body, #root{
     position: absolute;
     right: 10px;
     top: 2px;
+    
 }
 .hr90{
     border: 1px solid #D9D9D9;
@@ -737,10 +740,12 @@ footer{
     border-radius: 10px;
 }
                                                 /* My Account */
-.MyAccountHeaderContainer{
+.MyAccountBg{
     background-image: url('./assets//MyAccountBg.svg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.MyAccountHeaderContainer{
     position: relative;
     top: -15px;
     width: 100%;
@@ -848,4 +853,109 @@ footer{
 }
 .MyAccountRegisterContainer{
     margin-bottom: 200px;
+}
+                                    /* Checkout */
+.CheckoutBg{
+    background-image: url('./assets/CheckoutBg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.CheckoutBillingContainer{
+    display: flex;
+    padding: 100px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem;
+}
+.BillingHead{
+    font-size: 2.5rem;
+}
+.BillingNameContainer{
+    display: flex;
+    gap: 20px;
+
+}
+.BilltingTextArea{
+    outline: none;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+}
+.BilltingTextArea:hover{
+    border: 1px solid #000000;
+}
+.w10{
+    width: 370px;
+}
+.p10{
+    margin-top: 30px;
+}
+            /* billing right */
+.BillingRightUp{
+    display: flex;
+    gap: 50px;
+}
+.TextRight{
+    text-align: right;
+}
+.BillingProductDetailsTitle{
+    margin: 33px 0;
+    font-size: 1.5rem;
+}
+.BillingProductDetailsName{
+    color: #9F9F9F;
+    margin-bottom: 10px;
+}
+.BillingProductDetailsTotal{
+    margin: 20px 0;
+}
+.BillingProductDetailsLastPrice{
+    color: #B88E2F;
+    font-size: 1.6rem;
+    margin: 0;
+}
+.hr100{
+    border: 1px solid #D9D9D9;
+}
+.bullet{
+    background-color: #000000;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+.BillOption{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.BillOptionDesc{
+    color: #9F9F9F;
+    line-height: 30px;
+}
+.NoBg{
+    background-color: transparent;
+    border: 1px solid #9F9F9F;
+}
+.Grey{
+    color: #9F9F9F;
+}
+.BillOtherOption{
+    margin: 10px 0;
+}
+.LineSpace25{
+    line-height: 25px;
+}
+.PlaceOrderContainer{
+    display: flex;
+    justify-content: center;
+}
+.PlaceOrderButton{
+    background-color: transparent;
+    outline: none;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 10px 50px;
+    text-align: center;
+    margin-top: 20px;
 }
