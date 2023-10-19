@@ -1,5 +1,5 @@
 import './App.css'
-import CartPage from './Components/CartPage/CartPage'
+import ContactPage from './Components/ContactPage/ContactPage'
 
 
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <CartPage />
+      <ContactPage />
     </>
   )
 }

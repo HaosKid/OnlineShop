@@ -1039,3 +1039,69 @@ footer{
 .CartPageBg{
     background-image: url(./assets/CartPageBg.svg);
 }
+                                /* Contact */
+.ContactBodyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0 100px;
+}
+.ContactBodyHeader{
+    text-align: center;
+}
+.ContactBodyTitle{
+    font-size: 2.1rem;
+}
+.ContactBodyUnderTitle{
+    max-width: 650px;
+    color: #9F9F9F;
+    line-height: 30px;
+}
+.ContactBodyMiddle{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 300px;
+}
+.ContactBodyMiddleLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.ContactLeftItem{
+    display: flex;
+    gap: 20px;
+}
+.ContactLeftItemText{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ContactLeftItemTextHead{
+    margin: 0;
+    font-size: 1.3rem;
+}
+.ContactLeftItemTextUnderHead{
+    margin: 0;
+}
+.ContactBodyMiddleRight{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.ContactBodyRightText{
+    font-weight: bold;
+}
+.ContactBodyRightButton{
+    font-size: 1.1rem;
+    padding: 15px 40px;
+    border-radius: 10px;
+    width: 400px;
+    outline: none;
+    border: 1px solid #000000;
+    background-color: transparent;
+}
+.w100{
+    width: 250px;
+}
