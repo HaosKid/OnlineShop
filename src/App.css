@@ -747,6 +747,8 @@ footer{
 }
 .MyAccountHeaderContainer{
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: -15px;
     width: 100%;
     height: 316px;
@@ -958,4 +960,82 @@ footer{
     padding: 10px 50px;
     text-align: center;
     margin-top: 20px;
+}
+
+
+
+                                        /* cart page */
+.CartBodyContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 50px 0;
+
+}
+.CartBodyLegend{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFF9E5;
+}
+.CartBodyListItems{
+    display: flex;
+    padding: 50px 0;
+    gap: 20px;
+
+}
+.CartItemImg{
+    background-color: #D9D9D9;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+.CartItemItemTextContainer{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.CartQuantityItemContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.NoBdBg{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+}
+.CartQuantityItemNr{
+    margin: 0;
+}
+.CartBodyRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #FFF9E5;
+    margin: 20px;
+}
+.CartTitle{
+    font-size: 1.6rem;
+    text-align: center;
+}
+.CartBodyRightContainer{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    margin: 20px 0;
+}
+.CartCheckoutButton{
+    border: 1px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 50px;
+    margin: 0 60px 40px 60px;
+}
+.CartPageBg{
+    background-image: url(./assets/CartPageBg.svg);
 }

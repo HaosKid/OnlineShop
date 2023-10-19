@@ -1,5 +1,6 @@
 import './App.css'
-import Checkout from './Components/CheckOutPage/Checkout'
+import CartPage from './Components/CartPage/CartPage'
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Checkout />
+      <CartPage />
     </>
   )
 }
