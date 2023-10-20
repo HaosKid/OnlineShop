@@ -5,7 +5,7 @@ import Heart from '../../assets/Heart.svg'
 import Cart from '../../assets/Cart.svg'
 import xSacosa from '../../assets/xSacosa.svg'
 import tire from '../../assets/Tire.svg'
-
+import { Link } from 'react-router-dom'
 
 function MainPageBarHeader(){
     let Carut = {
@@ -31,11 +31,9 @@ function MainPageBarHeader(){
         <img src={logo} alt="Auto Essentials Logo" />
 
         <div className="LinkBar">
-            <a href="#" className='LinkBarItem'>Home</a>
-            <a href="#" className='LinkBarItem'>Shop</a>
-            <a href="#" className='LinkBarItem'>About</a>
-            <a href="#" className='LinkBarItem'>Contact</a>
-            <a href="#" className='LinkBarItem'>Tools</a>
+            <Link to="/" className='LinkBarItem'>Home</Link>
+            <Link to="/Shop" className='LinkBarItem'>Shop</Link>
+            <Link to="/Contact" className='LinkBarItem'>Contact</Link>
         </div>
         <div className="IconLinkBar">
             <a href="#"><img src={LilGuy} alt="Profile" /></a>

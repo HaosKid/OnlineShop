@@ -95,8 +95,26 @@ html, body, #root{
     font-size: 1rem;
     font-weight: lighter;
     border: none;
-    margin-top: 20px;
+    margin-top: 40px;
+    text-decoration: none;
+    transition: all 0.4s;
 }
+.HeaderButton:hover{
+    font-size: 1.3rem;
+}
+.MainPageHeaderImage{
+    position: relative;
+    animation: DreaptaStanga 1s;
+}
+@keyframes DreaptaStanga {
+    from {
+        right: -1100px;
+    }
+    to{
+        right: 0;
+    }
+}
+
 /* Search */
 
 .SearchText{
