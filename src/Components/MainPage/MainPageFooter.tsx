@@ -1,4 +1,5 @@
 import logo from '../../assets/logo.svg'
+import { Link } from 'react-router-dom'
 export default function MainPageFooter(){
     return(
         <footer>
@@ -9,18 +10,17 @@ export default function MainPageFooter(){
                         <p className="FooterLinkTitle">
                             Links
                         </p>
-                        <a href="#" className="FooterLinkItem">Home</a>
-                        <a href="#" className="FooterLinkItem">Shop</a>
-                        <a href="#" className="FooterLinkItem">About</a>
-                        <a href="#" className="FooterLinkItem">Contact</a>
+                        <Link to="/Home" className="FooterLinkItem">Home</Link>
+                        <Link to="/Shop" className="FooterLinkItem">Shop</Link>
+                        <Link to="/Contact" className="FooterLinkItem">Contact</Link>
                     </div>
                     <div className="FooterLink">
                         <p className="FooterLinkTitle">
                             Help
                         </p>
-                        <a href="#" className="FooterLinkItem">Payment Options</a>
-                        <a href="#" className="FooterLinkItem">Returns</a>
-                        <a href="#" className="FooterLinkItem">Privacy Policies</a>
+                        <Link to="/Checkout" className="FooterLinkItem">Payment Options</Link>
+                        <Link to="/Return" className="FooterLinkItem">Returns</Link>
+                        <Link to="/Policies" className="FooterLinkItem">Privacy Policies</Link>
 
                     </div>
                     <div className="FooterLink">

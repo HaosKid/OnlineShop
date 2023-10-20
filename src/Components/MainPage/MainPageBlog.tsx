@@ -3,6 +3,7 @@ import blog2 from "../../assets/blog2.svg"
 import blog3 from "../../assets/blog3.svg"
 import TinyClock from '../../assets/TinyClock.svg'
 import Calendar from '../../assets/calendar.svg'
+import { Link } from "react-router-dom"
 export default function MainPageBlog(){
     return(
         <article className="MainPageBlogContainer zeroPosition">
@@ -22,7 +23,7 @@ export default function MainPageBlog(){
                         <p className="BlogItemTitle">
                             How to change endgine oil at home?
                         </p>
-                        <a href="#" className="BlogReadMore"> Read More </a>
+                        <Link to="/Blog" className="BlogReadMore"> Read More </Link>
                         <div className="hr w70"></div>
                         <div className="BlogItemDownText">
                             <p className="BlogMinutes">
@@ -42,7 +43,7 @@ export default function MainPageBlog(){
                         <p className="BlogItemTitle">
                             How to change endgine oil at home?
                         </p>
-                        <a href="#" className="BlogReadMore"> Read More </a>
+                        <Link to="/Blog" className="BlogReadMore"> Read More </Link>
                         <div className="hr w70"></div>
                         <div className="BlogItemDownText">
                             <p className="BlogMinutes">
@@ -62,7 +63,7 @@ export default function MainPageBlog(){
                         <p className="BlogItemTitle">
                             How to change endgine oil at home?
                         </p>
-                        <a href="#" className="BlogReadMore"> Read More </a>
+                        <Link to="/Blog" className="BlogReadMore"> Read More </Link>
                         <div className="hr w70"></div>
                         <div className="BlogItemDownText">
                             <p className="BlogMinutes">

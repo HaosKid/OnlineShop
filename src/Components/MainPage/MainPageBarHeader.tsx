@@ -36,12 +36,12 @@ function MainPageBarHeader(){
             <Link to="/Contact" className='LinkBarItem'>Contact</Link>
         </div>
         <div className="IconLinkBar">
-            <a href="#"><img src={LilGuy} alt="Profile" /></a>
+            <Link to="/Account"><img src={LilGuy} alt="Profile" /></Link>
             <div className="searchContainer">
                 <input type="text" className='SearchText' placeholder='Type to search'/>
                 <img src={Search} alt="Search" />
             </div>
-            <a href="#"><img src={Heart} alt="Favorites" /></a>
+            <Link to="/Favorite"><img src={Heart} alt="Favorites" /></Link>
             <div className="CartDropDownMenuContainer">
                 <button className='CartDropDownMenuButton'><img src={Cart} alt="Search" /></button>
                 <div className="CartDropDownMenu">

@@ -25,6 +25,10 @@ function App() {
         <Route path='/Account' element={<MyAccount />}/>
         <Route path='/Product' element={<ProductPage />}/>
         <Route path='/Shop' element={<ShopPage />}/>
+        {/* <Route path='/Blog' element={<BlogPage />}/>
+        <Route path='/Favorite' element={<FavoritePage />}/> 
+        <Route path='/Return' element={<ReturnPage />}/> 
+        */}
       </Routes>
     </>
   )

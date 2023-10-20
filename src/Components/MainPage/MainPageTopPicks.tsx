@@ -2,7 +2,7 @@ import BrakeSystem from '../../assets/BrakeSystem.svg'
 import Tire from '../../assets/Tire.svg'
 import AirFilter from '../../assets/AirFilter.svg'
 import CarHeadlights from '../../assets/CarHeadlights.svg'
-
+import { Link } from 'react-router-dom'
 export default function MainPageTopPicks(){
     return(
         <article className="TopPicksContainer zeroPosition">
@@ -65,9 +65,9 @@ export default function MainPageTopPicks(){
                 </div>
             </div>
             <div className="TopPicksMore">
-                <a href="#" className='ViewMore'>
+                <Link to="/Shop" className='ViewMore'>
                     View More
-                </a>
+                </Link>
                 <div className="hr"></div>
             </div>
         </article>

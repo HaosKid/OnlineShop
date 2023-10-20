@@ -1,5 +1,7 @@
 import lubricant from "../../assets/Lubricant.svg"
 import SpareParts from "../../assets/SpareParts.svg"
+import { Link } from "react-router-dom"
+
 export default function MainPageHighlight(){
     return (
         <article className="MainPageHighlightContainer zeroPosition">
@@ -9,7 +11,7 @@ export default function MainPageHighlight(){
                     Lubricant
                 </h2>
                 <div className="highlightItemDown">
-                <a href="#">View More</a>
+                <Link to="/Shop">View More</Link>
                 <div className="hr"></div>
                 </div>
             </div>
@@ -19,7 +21,7 @@ export default function MainPageHighlight(){
                     Spare Parts
                 </h2>
                 <div className="highlightItemDown">
-                <a href="#">View More</a>
+                <Link to="/Shop">View More</Link>
                 <div className="hr"></div>
                 </div>
             </div>

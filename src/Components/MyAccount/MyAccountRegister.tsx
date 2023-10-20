@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 
 export default function MyAccountRegister(){
@@ -21,7 +21,7 @@ export default function MyAccountRegister(){
                 </div>
                 <div className="LogInButtonContainer">
                     <button className="LogInButton">Log In</button>
-                    <a href="#" className="LostPassword">Lost your password?</a>
+                    <Link to="/ResetPass" className="LostPassword">Lost your password?</Link>
 
                 </div>
             </section>
