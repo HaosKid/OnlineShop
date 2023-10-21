@@ -545,6 +545,8 @@ footer{
     margin: 30px;
 }
 .ShopPageButon{
+    text-decoration: none;
+    color: #000000;
     border: none;
     position: relative;
     bottom: 0;

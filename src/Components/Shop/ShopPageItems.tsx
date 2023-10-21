@@ -1,106 +1,41 @@
 import RedOil from '../../assets/ShellEngineOilRed.svg'
 import CremOil from '../../assets/ShellEngineOilCrem.svg'
 import BlackOil from '../../assets/ShellEngineOilBlack.svg'
+import { Link, useParams } from 'react-router-dom'
+import { useState } from 'react'
 
-
-
-export default function ShopPageItems(){
-    let ItemList = {
-        Item1: {
-            imagine:RedOil,
-            alt: 'Shell Engile Oil Red Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-        Item2: {
-            imagine:CremOil,
-            alt: 'Shell Engile Oil Crem Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "250€",
-            other: 'ImageCorrectionLeft'
-        },
-        Item3ShellRedOil: {
-            imagine:RedOil,
-            alt: 'Shell Engile Oil Red Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-        Item4: {
-            imagine: BlackOil,
-            alt: 'Shell Engile Oil Black Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-        Item5: {
-            imagine:RedOil,
-            alt: 'Shell Engile Oil Red Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-        Item6: {
-            imagine:CremOil,
-            alt: 'Shell Engile Oil CremOil Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-        Item7: {
-            imagine:RedOil,
-            alt: 'Shell Engile Oil Red Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-        Item8: {
-            imagine:CremOil,
-            alt: 'Shell Engile Oil Crem Image',
-            desc1: "Shell Engile Oil",
-            desc2: "Shope: Oil house",
-            price: "200€",
-            other: ''
-        },
-    }
-    var Item = []
-
-    for (const i in ItemList) {
-        const item = ItemList[i]
-        Item.push(
-            <div className="ShopPageItemContainer">
-                <img src={item.imagine} alt={item.alt} className={item.other}/>
-                <div className="ShopPageItemDesc">
-                    <p className="ShopItemDesc">{item.desc1}</p>
-                    <p className="ShopItemDesc">{item.desc2}</p>
-                    <p className="ShopItemPrice"><b>Price: {item.price}</b></p>  
-                </div>
-                
-            </div>
-        )
-        console.log(Item)
+export default function ShopPageItems(Item){
+    const [Count, setCount] = useState(2)
+    const { id }: { id: string } = useParams()
+    let Items = Item.Item.Item
+    var Just3Items = []
+    for (let i = 0; i < 4; i++) {
+        if (Number(id) == 2){
+            Just3Items.push(Items[i + (Number(id)+2)])
+        }
+        else if(Number(id) > 2){
+            Just3Items.push(Items[i + (Math.floor(Number(id)*2.7))])
+        }
+        else{
+            Just3Items.push(Items[i])
+        }
     }
 
+    var FirstNumber = () => (Count === 1)? <Link to={'/Shop/' + (Count)} className='ShopPageButon'>{Count}</Link>:<Link to={'/Shop/' + (Count - 1)} onClick={() => (Count === 1)? setCount(Count):setCount(Count - 1)} className='ShopPageButon'>{Count - 1}</Link>
+    var MainNumber = () => (Count === 1)? <Link to={'/Shop/' + (Count + 1)} className='ShopPageButon'>2</Link>: <Link to={'/Shop/' + Count} className='ShopPageButon'>{Count}</Link>
+    var SecNumber = () => (Count === 1)? <Link to={'/Shop/' + (Count + 2)} onClick={() => setCount(Count + 2)} className='ShopPageButon'>3</Link>:<Link to={'/Shop/' + (Count + 1)} onClick={() => setCount(Count + 1)} className='ShopPageButon'>{Count + 1}</Link>
 
     return(
         <div className="ShopPageItemCarousel">
             <div className="ShopPageItemList">
-              {Item}  
+              {Just3Items}
             </div>
             
             <div className="ShopPageButtons">
-                <button className='ShopPageButon'>1</button>
-                <button className='ShopPageButon'>2</button>
-                <button className='ShopPageButon'>3</button>
-                <button className='ShopPageButon'>Next</button>
+                {FirstNumber()}
+                {MainNumber()}
+                {SecNumber()}
+                <Link to={'/Shop/' + (Count + 1)} onClick={() => setCount(Count + 1)} className='ShopPageButon'>Next</Link>
             </div>
         </div>
     )

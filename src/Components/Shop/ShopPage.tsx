@@ -7,13 +7,14 @@ import ShopPageHeader from "./ShopPageHeader";
 import ShopPageItems from "./ShopPageItems";
 
 
-export default function ShopPage() {
+export default function ShopPage(Item) {
+
     return(
         <>
             <MainPageBarHeader />
             <ShopPageHeader />
             <ShopPageFilter />
-            <ShopPageItems />
+            <ShopPageItems Item = {Item}/>
             <ShopPageAds />
             <MainPageFooter />
         </>
