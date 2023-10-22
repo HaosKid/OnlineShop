@@ -28,7 +28,7 @@ function MainPageBarHeader(){
     }
     return(
     <div className="HeaderBar zeroPosition">
-        <img src={logo} alt="Auto Essentials Logo" />
+        <img src={logo} alt="Auto Essentials Logo" className='AELogo'/>
 
         <div className="LinkBar">
             <Link to="/" className='LinkBarItem'>Home</Link>
@@ -36,14 +36,14 @@ function MainPageBarHeader(){
             <Link to="/Contact" className='LinkBarItem'>Contact</Link>
         </div>
         <div className="IconLinkBar">
-            <Link to="/Account"><img src={LilGuy} alt="Profile" /></Link>
+            <Link to="/Account"><img src={LilGuy} alt="Profile" className='px20'/></Link>
             <div className="searchContainer">
                 <input type="text" className='SearchText' placeholder='Type to search'/>
                 <img src={Search} alt="Search" />
             </div>
-            <Link to="/Favorite"><img src={Heart} alt="Favorites" /></Link>
+            <Link to="/Favorite"><img src={Heart} alt="Favorites"  className='px20' /></Link>
             <div className="CartDropDownMenuContainer">
-                <button className='CartDropDownMenuButton'><img src={Cart} alt="Search" /></button>
+                <button className='CartDropDownMenuButton'><img src={Cart} alt="Search"  className='px20' /></button>
                 <div className="CartDropDownMenu">
                     <div className="DropDownMenuTop">
                         <h2 className='DropDownMenuTitle'>

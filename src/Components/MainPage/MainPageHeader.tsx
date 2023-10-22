@@ -17,7 +17,7 @@ export default function MainPageHeader(){
                     <h2 className="HeaderH2">All Major Brands Available</h2>
                     <Link to='/Shop' className="HeaderButton">Shop Now</Link>
                 </div>
-                <img src={CutiaMisterelor} alt="Box filled with tools and car parts" className="MainPageHeaderImage"/>
+                <img src={CutiaMisterelor} alt="Box filled with tools and car parts" className="MainPageHeaderImage dNone"/>
             </div>
         </header>
         </>

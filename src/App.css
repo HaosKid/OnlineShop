@@ -24,7 +24,7 @@ html, body, #root{
 .HeaderContactItem{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
 }
@@ -36,6 +36,41 @@ html, body, #root{
     padding: 15px 30px;
     border: none;
     border-radius: 10px;
+    width: 13%;
+    font-size: .8rem;
+}
+.HeaderContactItemContainer{
+    display: flex;
+    gap: 350px;
+
+}
+@media (max-width: 450px)  {
+    .HeaderContactItemContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .HeaderContactContainer{
+        align-items: center;
+        height: 150px;
+    }
+    .HeaderContactItem{
+        font-size: .7rem;
+    }
+    .SellerButton{
+        width: 150px;
+        height: 40px;
+        font-size: .7rem;
+    }
+    .dNone{
+        display: none;
+    }
+    .HeaderSpan, .HeaderH1{
+        
+    }
+
 }
                         /* Header */
 .header{
@@ -52,6 +87,7 @@ html, body, #root{
 }
 .LinkBar{
     display: flex;
+    justify-content: space-between;
     gap: 69px;
     font-weight: bolder;
 
