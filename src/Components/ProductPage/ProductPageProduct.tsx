@@ -11,16 +11,16 @@ export default function ProductPageProduct() {
             <div className="ProductContainerLeft">
                 <div className="ProductImgCarousel">
                     <div className="ProductCarouselItem">
-                        <img src={Roata1} alt="Tire image 1" />
+                        <img src={Roata1} alt="Tire image 1" className='ProductCarouselImg'/>
                     </div>
                     <div className="ProductCarouselItem">
-                        <img src={Roata2} alt="Tire image 2" />
+                        <img src={Roata2} alt="Tire image 2"  className='ProductCarouselImg'/>
                     </div>
                     <div className="ProductCarouselItem">
-                        <img src={Roata3} alt="Tire image 3" />
+                        <img src={Roata3} alt="Tire image 3"  className='ProductCarouselImg'/>
                     </div>
                     <div className="ProductCarouselItem">
-                        <img src={Roata4} alt="Tire image 4(last)" />
+                        <img src={Roata4} alt="Tire image 4(last)"  className='ProductCarouselImg'/>
                     </div>
                 </div>
                 <div className="ProductImgShow">

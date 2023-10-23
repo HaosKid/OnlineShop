@@ -23,7 +23,7 @@ export default function CartBody(){
                 <div className="CartBodyListItems">
                     <img src={Roata} alt="Tire image" className='CartItemImg'/>
                     <div className="CartItemItemTextContainer">
-                        <p className="CartItemName">MIRAGE MR-AT172 285/65</p>
+                        <p className="CartItemName">MIRAGE ...</p>
                         <p className="CartItemPrice">250€</p>
                         <div className="CartQuantityItemContainer">
                             <button className="NoBdBg" onClick={() => (quantity <= 1)? null : setQuantity(quantity - 1)}>
@@ -37,7 +37,7 @@ export default function CartBody(){
                             </button>
                         </div>
                         <p className="CartItemTotalPrice">250€</p>
-                        <button className='CartItemDelButton NoBdBg'><img src={DelImg} alt="Delete Button" /></button>
+                        <button className='CartItemDelButton NoBdBg'><img src={DelImg} alt="Delete Button" className='deleteCartItemImg'/></button>
                     </div>
                 </div>
             </article>

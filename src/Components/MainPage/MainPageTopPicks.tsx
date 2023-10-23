@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 export default function MainPageTopPicks(){
     return(
         <article className="TopPicksContainer zeroPosition">
+            <div className="TopPicksContainer2">
+
             <div className="TopPicksTitle">
                 <h2 className="TopPicksHead">
                     Top Picks For You
@@ -69,6 +71,7 @@ export default function MainPageTopPicks(){
                     View More
                 </Link>
                 <div className="hr"></div>
+            </div>
             </div>
         </article>
     )

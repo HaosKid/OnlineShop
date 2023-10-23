@@ -5,8 +5,10 @@ import { Link } from "react-router-dom"
 export default function MainPageHighlight(){
     return (
         <article className="MainPageHighlightContainer zeroPosition">
+            <div className="MainPageHighlightContainer2">
+
             <div className="highlightItem">
-                <img src={lubricant} alt="Car Lubricant Img" />
+                <img src={lubricant} alt="Car Lubricant Img" className="HighlightItemImg" />
                 <h2 className="ItemName">
                     Lubricant
                 </h2>
@@ -16,7 +18,7 @@ export default function MainPageHighlight(){
                 </div>
             </div>
             <div className="highlightItem">
-                <img src={SpareParts} alt="Spare Parts Img" />
+                <img src={SpareParts} alt="Spare Parts Img" className="HighlightItemImg" />
                 <h2 className="ItemName">
                     Spare Parts
                 </h2>
@@ -24,6 +26,7 @@ export default function MainPageHighlight(){
                 <Link to="/Shop">View More</Link>
                 <div className="hr"></div>
                 </div>
+            </div>
             </div>
 
         </article>

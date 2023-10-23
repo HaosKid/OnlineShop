@@ -44,34 +44,7 @@ html, body, #root{
     gap: 350px;
 
 }
-@media (max-width: 450px)  {
-    .HeaderContactItemContainer{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .HeaderContactContainer{
-        align-items: center;
-        height: 150px;
-    }
-    .HeaderContactItem{
-        font-size: .7rem;
-    }
-    .SellerButton{
-        width: 150px;
-        height: 40px;
-        font-size: .7rem;
-    }
-    .dNone{
-        display: none;
-    }
-    .HeaderSpan, .HeaderH1{
-        
-    }
 
-}
                         /* Header */
 .header{
     background-color: #D4D4D4;
@@ -274,6 +247,12 @@ html, body, #root{
     gap: 35px;
     padding: 50px 0 100px;
 }
+.MainPageHighlightContainer2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 150px;
+}
 .highlightItem{
     display: flex;
     flex-direction: column;
@@ -312,6 +291,13 @@ html, body, #root{
     gap: 30px;
     background-color: #ffffff;
     padding: 50px 0;
+}
+.TopPicksContainer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
 }
 .TopPicksTitle{
     text-align: center;
@@ -354,6 +340,12 @@ html, body, #root{
 
     padding: 30px 10px;
     color: #000000;
+}
+.NewArrivalContainer2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
 }
 .NewArrivalText{
     text-align: center;
@@ -920,7 +912,7 @@ footer{
 }
 .CheckoutBillingContainer{
     display: flex;
-    padding: 100px;
+
     justify-content: center;
     align-items: flex-start;
     gap: 10rem;
@@ -1030,26 +1022,29 @@ footer{
 }
 .CartBodyLegend{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: #FFF9E5;
+    gap: 50px;
+    padding: 0 30px;
+    margin-left: 50px;
 }
 .CartBodyListItems{
     display: flex;
     padding: 50px 0;
-    gap: 20px;
+    gap: 3em;
 
 }
 .CartItemImg{
     background-color: #D9D9D9;
-    width: 70px;
-    height: 70px;
+    width: 5em;
+    height: 5em;
     border-radius: 5px;
 }
 .CartItemItemTextContainer{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 3em;
 }
 .CartQuantityItemContainer{
     display: flex;
@@ -1117,7 +1112,7 @@ footer{
 .ContactBodyMiddle{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: start;
     gap: 300px;
 }
 .ContactBodyMiddleLeft{
@@ -1160,4 +1155,177 @@ footer{
 }
 .w100{
     width: 250px;
+}
+
+
+@media (max-width: 450px)  {
+    .HeaderContactItemContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .HeaderContactContainer{
+        align-items: center;
+        height: 150px;
+    }
+    .HeaderContactItem{
+        font-size: .7rem;
+    }
+    .SellerButton{
+        width: 150px;
+        height: 40px;
+        font-size: .7rem;
+        padding: 10px;
+    }
+    .dNone{
+        display: none;
+    }
+    .MainPageHighlightContainer2{
+        display: flex;
+        flex-direction: column;
+    }
+    .HighlightItemImg{
+        height: 200px;
+    }
+    .ItemName{
+        text-align: center;
+    }
+    .TopPicksItemContainer{
+        flex-direction: column;
+    }
+    .TopPicksUnderHead{
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    .NewArrivalContainer2{
+        flex-direction: column;
+    }
+    .NewArrivalImg{
+        height: 200px;
+    }
+    .BlogItemContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .BlogImg{
+        height: 200px;
+    }
+    .BlogItem{
+        width: 200px;
+    }
+    .BlogItemDownText{
+        text-align: center;
+    }
+    .BlogMinImg{
+        height: 15px;
+        margin: 0 10px;
+
+    }
+    .BlogItemTitle{
+        text-align: center;
+    }
+    .UpperFooterContainer{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .FooterLinksContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .FooterLink{
+        text-align: center;
+    }
+    .CartBodyContainer{
+        flex-direction: column;
+    }
+    .CartBodyLeft{
+        font-size: .6rem;
+    }
+    .CartBodyLegend{
+        gap: 10px;
+        margin: 0;
+
+    }
+    .deleteCartItemImg{
+        height: 20px;
+    }
+    .CartBodyRight{
+        font-size: .7rem;
+    }
+    .ShopPageAdsContrainer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .CheckoutBillingContainer{
+        padding: 0 0 70px 10px;
+        flex-direction: column;
+    }
+    .ContactBodyMiddle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ContactBodyRightButton{
+        width: 70%;
+    }
+    .ContactBodyRightItem{
+        margin-left: 10px;
+    }
+    .s10{
+        margin-left: 10px;
+    }
+    .MyAccountRegisterContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ProductPageProductContainer{
+        flex-direction: column;
+    }
+    .ProductImgShow, .ProductPageMainImg{
+        height: 300px;
+        width: 300px;
+    }
+    .ProductContainerLeft{
+        flex-direction: column-reverse;
+    }
+    .ProductImgCarousel{
+        flex-direction: row;
+    }
+    .ProductCarouselImg, .ProductCarouselItem{
+        height: 60px;
+        width: 60px;
+    }
+    .ProductCarouselItem{
+        flex-direction: column;
+    }
+    .InfoNavBarButton{
+        font-size: 1rem;
+    }
+    .ProductPageInfoNavBar{
+        gap: 20px;
+    }
+    .ProductPageInfoText{
+        width: 90%;
+        line-height: 30px;
+    }
+    .ProductPageInfoImg{
+        flex-direction: column;
+    }
+    .ProductPageInfoImgItem{
+        height: 400px;
+        width: 400px;
+    }
+    .ShopPageItemList{
+        align-items: center;
+        justify-content: center;
+    }
+    .ShopPageFilterInfoItems{
+        font-size: .7rem;
+    }
 }

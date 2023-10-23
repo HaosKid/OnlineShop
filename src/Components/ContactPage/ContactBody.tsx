@@ -64,7 +64,7 @@ export default function ContactBody() {
                         </p>
                         <textarea name="Text1" cols="40" rows="5" placeholder='Your Message' className='ContactBodyRightButton'></textarea>
                     </div>
-                    <button className="ContactBodyRightButton w100">
+                    <button className="ContactBodyRightButton s10 w100">
                         Submit
                     </button>
                 </div>

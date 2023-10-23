@@ -18,7 +18,7 @@ export default function MainPageBlog(){
             <div className="BlogItemContainer">
                 {/* Item 1 */}
                 <div className="BlogItem">
-                    <img src={blog1} alt="Blog Image" />
+                    <img src={blog1} alt="Blog Image"  className="BlogImg"/>
                     <div className="BlogItemDesc">
                         <p className="BlogItemTitle">
                             How to change endgine oil at home?
@@ -27,9 +27,9 @@ export default function MainPageBlog(){
                         <div className="hr w70"></div>
                         <div className="BlogItemDownText">
                             <p className="BlogMinutes">
-                                <img src={TinyClock} alt="Tiny clock image" /> 
+                                <img src={TinyClock} alt="Tiny clock image"  className="BlogMinImg"/> 
                                 5 minutes   
-                                <img src={Calendar} alt="tiny calendar image" />
+                                <img src={Calendar} alt="tiny calendar image"  className="BlogMinImg"/>
                                 12th Oct 2023
                                 </p>
 
@@ -38,7 +38,7 @@ export default function MainPageBlog(){
                 </div>
                 {/* Item 2 */}
                 <div className="BlogItem">
-                    <img src={blog2} alt="Blog Image" />
+                    <img src={blog2} alt="Blog Image"  className="BlogImg"/>
                     <div className="BlogItemDesc">
                         <p className="BlogItemTitle">
                             How to change endgine oil at home?
@@ -47,9 +47,9 @@ export default function MainPageBlog(){
                         <div className="hr w70"></div>
                         <div className="BlogItemDownText">
                             <p className="BlogMinutes">
-                                <img src={TinyClock} alt="Tiny clock image" /> 
+                                <img src={TinyClock} alt="Tiny clock image"  className="BlogMinImg"/> 
                                 5 minutes   
-                                <img src={Calendar} alt="tiny calendar image" />
+                                <img src={Calendar} alt="tiny calendar image"  className="BlogMinImg"/>
                                 12th Oct 2023
                                 </p>
 
@@ -58,7 +58,7 @@ export default function MainPageBlog(){
                 </div>
                 {/* Item 3 */}
                 <div className="BlogItem">
-                    <img src={blog3} alt="Blog Image" />
+                    <img src={blog3} alt="Blog Image" className="BlogImg"/>
                     <div className="BlogItemDesc">
                         <p className="BlogItemTitle">
                             How to change endgine oil at home?
@@ -67,9 +67,9 @@ export default function MainPageBlog(){
                         <div className="hr w70"></div>
                         <div className="BlogItemDownText">
                             <p className="BlogMinutes">
-                                <img src={TinyClock} alt="Tiny clock image" /> 
+                                <img src={TinyClock} alt="Tiny clock image" className="BlogMinImg"/> 
                                 5 minutes   
-                                <img src={Calendar} alt="tiny calendar image" />
+                                <img src={Calendar} alt="tiny calendar image" className="BlogMinImg" />
                                 12th Oct 2023
                                 </p>
 
