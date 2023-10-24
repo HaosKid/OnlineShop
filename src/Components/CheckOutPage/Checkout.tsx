@@ -10,7 +10,7 @@ export default function Checkout() {
 
     return(
         <>
-        <MainPageBarHeader />
+        
         <CheckoutHeader />
         <CheckoutBilling />
         <ShopPageAds />

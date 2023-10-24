@@ -188,7 +188,23 @@ html, body, #root{
     margin: 30px 0;
 
 }
+.CartItemQuantity:focus, .CartItemQuantity{
+    width: 25px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
 .CartDropDownMenuMiddle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.CartDropDownMenuMiddle2{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -588,6 +604,14 @@ footer{
 .ShopPageButon:hover{
     bottom: 2px;
     background-color: #FBEBB5;
+}
+.ShopItemAddCartButton{
+    background-color: transparent;
+    border: 1px solid #D4D4D4;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius:5px;
+    margin-left: 18px;
 }
                         /* Ads */
 .ShopPageAdsContrainer{
@@ -1185,12 +1209,22 @@ footer{
     .MainPageHighlightContainer2{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .highlightItem{
+        text-align: start;
+        display: flex;
+        justify-content: start;
+    }
+    .highlightItemDown{
+        left: 50px;
     }
     .HighlightItemImg{
         height: 200px;
     }
     .ItemName{
-        text-align: center;
+        font-size: 1.7rem;
     }
     .TopPicksItemContainer{
         flex-direction: column;

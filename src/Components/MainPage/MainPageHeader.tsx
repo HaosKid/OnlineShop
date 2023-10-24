@@ -3,12 +3,10 @@ import CutiaMisterelor from '../../assets/CutiaMisterelor.svg'
 import MainPageHeaderContact from "./MainPageHeaderContact"
 import { Link } from "react-router-dom"
 
-export default function MainPageHeader(){
+export default function MainPageHeader({ItemList}){
     return(
         <>
-        <MainPageHeaderContact />
         <header className="header zeroPosition">
-           <MainPageBarHeader /> 
             <div className="HeaderContent">
                 <div className="HeaderContentItem">
                     <h1 className="HeaderH1">

@@ -6,10 +6,11 @@ import MainPageInstagram from './MainPageInstagram'
 import MainPageNewArrivals from './MainPageNewArrivals'
 import MainPageTopPicks from './MainPageTopPicks'
 
-export default function MainPage(){
+export default function MainPage({ ItemList }){
+
     return(
          <>
-    <MainPageHeader />
+    <MainPageHeader ItemList = {ItemList}/>
     <MainPageHighlight />
     <MainPageTopPicks />
     <MainPageNewArrivals />

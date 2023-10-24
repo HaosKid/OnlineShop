@@ -10,7 +10,7 @@ import ProductPageProduct from "./ProductPageProduct";
 export default function ProductPage(){
     return(
         <>
-            <MainPageBarHeader />
+            
             <ProductPagePathBar />
             <ProductPageProduct />
             <ProductPageInfo />

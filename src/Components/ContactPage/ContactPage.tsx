@@ -9,7 +9,7 @@ import ContactHeader from "./ContactHeader";
 export default function ContactPage() {
     return(
         <>
-        <MainPageBarHeader />
+        
         <ContactHeader />
         <ContactBody />
         <ShopPageAds />

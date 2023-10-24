@@ -11,7 +11,7 @@ export default function ShopPage(Item) {
 
     return(
         <>
-            <MainPageBarHeader />
+            
             <ShopPageHeader />
             <ShopPageFilter />
             <ShopPageItems Item = {Item}/>

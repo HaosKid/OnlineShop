@@ -9,7 +9,7 @@ export default function MyAccount(){
 
     return(
         <>
-        <MainPageBarHeader />
+        
         <MyAccountHeader />
         <MyAccountRegister />
         <ShopPageAds />

@@ -9,7 +9,7 @@ import CartHeader from "./CartHeader";
 export default function CartPage(){
     return(
         <>
-        <MainPageBarHeader />
+        
         <CartHeader />
         <CartBody />
         <ShopPageAds />
