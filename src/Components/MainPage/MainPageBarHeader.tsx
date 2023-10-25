@@ -4,20 +4,28 @@ import Search from '../../assets/Search.svg'
 import Heart from '../../assets/Heart.svg'
 import Cart from '../../assets/Cart.svg'
 import xSacosa from '../../assets/xSacosa.svg'
-import tire from '../../assets/Tire.svg'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useReducer, useEffect, useState } from 'react'
 
 function MainPageBarHeader({ItemList}){
-    let count = 0
-    let Carut = []
+    const [ref, setRef] = useReducer(x => x + 1, 0)
+    const [test, setTest] = useState({})
+
+    var da = {}
+    let Carut: any[] = []
     let total = 0
-
-
+    function merge(){
+        console.log("merge")
         for (const i in ItemList){
+            function OutCart(){
+                ItemList[i].InCart = 0
+                Carut.splice(ItemList[i].id, 1)
+                setRef()         //I have no idea WHY this is working but if you delete this line the cart is not updating. (╯°□°)╯︵ ┻━┻
+                console.log('merge')    //I actually need that table. ┬─┬ノ( º _ ºノ) here you go.
 
+            }
+            if (ItemList[i].InCart === 1 && ItemList[i].Added === 0){
 
-            if (ItemList[i].InCart === 1){
                 total = total + ItemList[i].price
                 Carut.push(
                     <div className="CartDropDownMenuMiddle2">
@@ -28,13 +36,14 @@ function MainPageBarHeader({ItemList}){
                             <p><b>{ItemList[i].desc1}</b></p>
                             <p><input type="number" value={'1'} className='CartItemQuantity'/> x {ItemList[i].price}€</p>
                         </div>
-                        <button className='CartDropDownCheckBox' id={ItemList[i].id} onClick={() => Carut.splice(count)}>x</button>
+                        <button className='CartDropDownCheckBox' id={ItemList[i].id} onClick={OutCart}>x</button>
                     </div>
-                    )
-
-                }
+                )
             }
+        }
 
+    }
+    merge()
     return(
     <div className="HeaderBar zeroPosition">
         <img src={logo} alt="Auto Essentials Logo" className='AELogo'/>
@@ -68,6 +77,7 @@ function MainPageBarHeader({ItemList}){
                         <div className="CartDownSubTotal">
                             <p>Subtotal</p>
                             <p>{total}€</p>
+
                         </div>
                         <div className="hr90 hr100"></div>
                         <div className="CartDownButtons">

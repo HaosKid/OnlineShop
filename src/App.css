@@ -167,7 +167,7 @@ html, body, #root{
     opacity: 1;
     transform: translateY(0);
     width: 25vw;
-    height: 500px;
+    height: 600px;
     top: 0;
     right: 0;
     
@@ -200,7 +200,7 @@ html, body, #root{
     align-items: flex-start;
     flex-direction: column;
     gap: 5px;
-    height: 200px;
+    height: 300px;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }

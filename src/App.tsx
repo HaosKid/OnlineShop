@@ -3,7 +3,7 @@ import './App.css'
 import RedOil from './assets/ShellEngineOilRed.svg'
 import CremOil from './assets/ShellEngineOilCrem.svg'
 import BlackOil from './assets/ShellEngineOilBlack.svg'
-
+import {useEffect, useReducer, useState} from 'react'
 import ContactPage from './Components/ContactPage/ContactPage'
 import { Route, Routes } from 'react-router-dom'
 import MainPage from './Components/MainPage/MainPage'
@@ -17,7 +17,9 @@ import MainPageBarHeader from './Components/MainPage/MainPageBarHeader'
 
 
 function App() {
-  let ItemList = {
+    const [ref, setRef] = useReducer( x => x + 1, 0)
+    const [number, setNumber] = useState(1)
+  let ItemList: any = {
     Item1: {
         imagine:RedOil,
         alt: 'Shell Engile Oil Red Image',
@@ -28,7 +30,8 @@ function App() {
         id: 1,
         Color: "Red",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item2: {
         imagine:CremOil,
@@ -40,7 +43,8 @@ function App() {
         id: 2,
         Color: "Crem",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item3ShellRedOil: {
         imagine:RedOil,
@@ -52,7 +56,8 @@ function App() {
         id: 3,
         Color: "Red",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item4: {
         imagine: BlackOil,
@@ -64,7 +69,8 @@ function App() {
         id: 4,
         Color: "Black",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item5: {
         imagine:RedOil,
@@ -76,7 +82,8 @@ function App() {
         id: 5,
         Color: "Red",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item6: {
         imagine:CremOil,
@@ -88,7 +95,8 @@ function App() {
         id: 6,
         Color: "Crem",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item7: {
         imagine:RedOil,
@@ -100,7 +108,8 @@ function App() {
         id: 7,
         Color: "Red",
         Favorite: 0,
-        InCart: 0
+        InCart: 1,
+        Added: 0
     },
     Item8: {
         imagine:CremOil,
@@ -112,7 +121,8 @@ function App() {
         id: 8,
         Color: "Crem",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item9: {
       imagine: BlackOil,
@@ -124,7 +134,8 @@ function App() {
       id: 9,
       Color: "Black",
       Favorite: 0,
-      InCart: 0
+      InCart: 1,
+      Added: 0
     },
     Item10: {
         imagine:RedOil,
@@ -136,7 +147,8 @@ function App() {
         id: 10,
         Color: "Red",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item11: {
         imagine:CremOil,
@@ -148,7 +160,8 @@ function App() {
         id: 11,
         Color: "Crem",
         Favorite: 0,
-        InCart: 0
+        InCart: 0,
+        Added: 0
     },
     Item12: {
         imagine:RedOil,
@@ -160,7 +173,8 @@ function App() {
         id: 12,
         Color: "Red",
         Favorite: 0,
-        InCart: 1
+        InCart: 0,
+        Added: 0
     },
     Item13: {
         imagine:CremOil,
@@ -172,17 +186,31 @@ function App() {
         id: 13,
         Color: "Crem",
         Favorite: 0,
-        InCart: 1
+        InCart: 0,
+        Added: 0
     },
 }
 
 
 
+
+
+
+
+
+
+
 var Item = []
 
-for (const i in ItemList) {
-    const item = ItemList[i]
 
+for (const i in ItemList) {
+
+    const item = ItemList[i]
+    function InCart() {
+        ItemList[i].InCart = 1
+        setRef()
+        console.log(ItemList[i].InCart)
+    }
     Item.push(
         <div className="ShopPageItemContainer">
             <img src={item.imagine} alt={item.alt} className={item.other}/>
@@ -190,7 +218,7 @@ for (const i in ItemList) {
                 <p className="ShopItemDesc">{item.desc1}</p>
                 <p className="ShopItemDesc">{item.desc2}</p>
                 <p className="ShopItemPrice"><b>Price: {item.price}</b></p>
-                <button className='ShopItemAddCartButton' id={ItemList[i].id} onClick={() => ItemList[i].InCart = 1}>Add to cart</button>
+                <button className='ShopItemAddCartButton' id={item.id} onClick={InCart}>Add to cart</button>
             </div>
         </div>
     )

@@ -20,7 +20,7 @@ export default function ShopPageFilter(){
             <div className="ShopPageFilterRight">
                 <div className="FilterRightItem">
                    <p>Show</p>
-                    <input type="number" name="number" id="number" min={'1'} max={'32'} value={'1'} className='FilterItemInputNr'/> 
+                    <input type="number" name="number" id="number" min={'1'} max={'32'} placeholder={'1'} className='FilterItemInputNr'/> 
                 </div>
                 <div className="FilterRightItem">
                     <p>Short by </p>

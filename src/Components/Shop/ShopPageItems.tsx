@@ -1,6 +1,3 @@
-import RedOil from '../../assets/ShellEngineOilRed.svg'
-import CremOil from '../../assets/ShellEngineOilCrem.svg'
-import BlackOil from '../../assets/ShellEngineOilBlack.svg'
 import { Link, useParams } from 'react-router-dom'
 import { useState } from 'react'
 
