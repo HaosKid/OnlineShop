@@ -186,7 +186,7 @@ function App() {
         id: 13,
         Color: "Crem",
         Favorite: 0,
-        InCart: 0,
+        InCart: 1,
         Added: 0
     },
 }
@@ -197,22 +197,73 @@ function App() {
 
 
 
-
-
-
+//locul unde se stocheaza itemele din carut
+let Carut: any[] = []
+let total = 0
 var Item = []
+var numarCarut = 0
+var numar = 1
+
+
+
+
+
+
+
+
 
 
 for (const i in ItemList) {
+    const dexter = (() => {
+        Carut.push(
+            <div key={numarCarut} className="CartDropDownMenuMiddle2">
+                <div className="ProductCarouselItem">
+                    <img src={ItemList[i].imagine} alt={ItemList[i].alt} height={'100px'}/>
+                </div>
+                <div className="CartDropDownItemDesc">
+                    <p><b>{ItemList[i].desc1}</b></p>
+                    <p><input type="number" placeholder={'1'} className='CartItemQuantity'/> x {ItemList[i].price}€</p>
+                </div>
+                <button className='CartDropDownCheckBox' id={ItemList[i].id} onClick={OutCart}>x</button>
+            </div>
+        )
+    })
+
+    function OutCart(){
+        ItemList[i].InCart = 0
+        Carut.splice(ItemList[i].id, 1)
+        setRef()         //I have no idea WHY this is working but if you delete this line the cart is not updating. (╯°□°)╯︵ ┻━┻
+        console.log('merge')    //I actually need that table. ┬─┬ノ( º _ ºノ) here you go.
+    }
+
+    if (ItemList[i].InCart === 1 && ItemList[i].Added === 0){
+        numarCarut++
+        total = total + ItemList[i].price
+        dexter()
+    }
+    
+
+
+
+
+//////////////////////////////////////////
+
+
+
+
+
+
 
     const item = ItemList[i]
     function InCart() {
         ItemList[i].InCart = 1
         setRef()
         console.log(ItemList[i].InCart)
+        dexter()
     }
+    numar++
     Item.push(
-        <div className="ShopPageItemContainer">
+        <div key={numar} className="ShopPageItemContainer">
             <img src={item.imagine} alt={item.alt} className={item.other}/>
             <div className="ShopPageItemDesc">
                 <p className="ShopItemDesc">{item.desc1}</p>
@@ -223,10 +274,9 @@ for (const i in ItemList) {
         </div>
     )
 }
-
   return (
     <>
-      <MainPageBarHeader ItemList = {ItemList}/>
+      <MainPageBarHeader Carut = {Carut} total ={total}/>
       <Routes>
         <Route path='/' element={<MainPage ItemList = {ItemList}/>}/>
         <Route path='/Cart' element={<CartPage />}/>
