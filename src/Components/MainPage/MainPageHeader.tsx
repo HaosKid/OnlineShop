@@ -3,7 +3,7 @@ import CutiaMisterelor from '../../assets/CutiaMisterelor.svg'
 import MainPageHeaderContact from "./MainPageHeaderContact"
 import { Link } from "react-router-dom"
 
-export default function MainPageHeader({ItemList}){
+export default function MainPageHeader(){
     return(
         <>
         <header className="header zeroPosition">

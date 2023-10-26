@@ -5,45 +5,23 @@ import Heart from '../../assets/Heart.svg'
 import Cart from '../../assets/Cart.svg'
 import xSacosa from '../../assets/xSacosa.svg'
 import { Link } from 'react-router-dom'
-import { useReducer, useEffect, useState } from 'react'
-
-function MainPageBarHeader({Carut, total}){
-    // const [ref, setRef] = useReducer(x => x + 1, 0)
+import { products } from '../Shop/ShopPage'
+import { useEffect, useState } from 'react'
 
 
+function MainPageBarHeader({cart, setCart}){
+    
 
-    // let Carut: any[] = []
-    // let total = 0
-    // function merge(){
-    //     console.log("merge")
-    //     for (const i in ItemList){
-    //         function OutCart(){
-    //             ItemList[i].InCart = 0
-    //             Carut.splice(ItemList[i].id, 1)
-    //             setRef()         //I have no idea WHY this is working but if you delete this line the cart is not updating. (╯°□°)╯︵ ┻━┻
-    //             console.log('merge')    //I actually need that table. ┬─┬ノ( º _ ºノ) here you go.
+    let total = 0
 
-    //         }
-    //         if (ItemList[i].InCart === 1 && ItemList[i].Added === 0){
+    function DelCartItem(ids){
 
-    //             total = total + ItemList[i].price
-    //             Carut.push(
-    //                 <div className="CartDropDownMenuMiddle2">
-    //                     <div className="ProductCarouselItem">
-    //                         <img src={ItemList[i].imagine} alt={ItemList[i].alt} height={'100px'}/>
-    //                     </div>
-    //                     <div className="CartDropDownItemDesc">
-    //                         <p><b>{ItemList[i].desc1}</b></p>
-    //                         <p><input type="number" value={'1'} className='CartItemQuantity'/> x {ItemList[i].price}€</p>
-    //                     </div>
-    //                     <button className='CartDropDownCheckBox' id={ItemList[i].id} onClick={OutCart}>x</button>
-    //                 </div>
-    //             )
-    //         }
-    //     }
+        const index = cart.filter(product => product.id !== ids)
+        setCart(index)
+        localStorage.setItem('cart', JSON.stringify(index))
 
-    // }
-    // merge()
+    }
+
     return(
     <div className="HeaderBar zeroPosition">
         <img src={logo} alt="Auto Essentials Logo" className='AELogo'/>
@@ -71,7 +49,21 @@ function MainPageBarHeader({Carut, total}){
                         <div className="hr90"></div>
                     </div>
                     <div className="CartDropDownMenuMiddle">
-                        {Carut}
+                        {cart? cart.map((Product : any) => {
+                            total = total + Product.price
+                            return <>
+                            <div  className="CartDropDownMenuMiddle2">
+                                <div className="ProductCarouselItem">
+                                    <img src={Product.imagine} alt={Product.alt} height={'100px'}/>
+                                </div>
+                                <div className="CartDropDownItemDesc">
+                                    <p><b>{Product.desc1}</b></p>
+                                    <p><input type="number" placeholder={'1'} className='CartItemQuantity'/> x {Product.price}€</p>
+                                </div>
+                                <button className='CartDropDownCheckBox' onClick={() =>DelCartItem(Product.id)}>x</button>
+                            </div>
+                            </>
+                        }): null}
                     </div>
                     <div className="CartDropDownMenuDown">
                         <div className="CartDownSubTotal">
