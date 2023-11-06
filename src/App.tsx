@@ -49,7 +49,7 @@ function App() {
       <MainPageBarHeader cart = {cart} setCart={setCart}/>
       <Routes>
         <Route path='/' element={<MainPage  />}/>
-        <Route path='/Cart' element={<CartPage />}/>
+        <Route path='/Cart' element={<CartPage cart = {cart} setCart={setCart}/>}/>
         <Route path='/Checkout' element={<Checkout />}/>
         <Route path='/Contact' element={<ContactPage />}/>
         <Route path='/Account' element={<MyAccount />}/>

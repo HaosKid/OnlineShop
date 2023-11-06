@@ -37,7 +37,7 @@ function MainPageBarHeader({cart, setCart}){
                 <input type="text" className='SearchText' placeholder='Type to search'/>
                 <img src={Search} alt="Search" />
             </div>
-            <Link to="/Favorite"><img src={Heart} alt="Favorites"  className='px20' /></Link>
+            {/* <Link to="/Favorite"><img src={Heart} alt="Favorites"  className='px20' /></Link> */}
             <div className="CartDropDownMenuContainer">
                 <button className='CartDropDownMenuButton'  ><img src={Cart} alt="Search"  className='px20'/></button>
                 <div className="CartDropDownMenu">
@@ -73,8 +73,8 @@ function MainPageBarHeader({cart, setCart}){
                         </div>
                         <div className="hr90 hr100"></div>
                         <div className="CartDownButtons">
-                            <button className="CartButtonDown">View Cart</button>
-                            <button className="CartButtonDown">Checkout</button>
+                            <Link to="/Cart" className="CartButtonDown">View Cart</Link>
+                            <Link to="/Checkout" className="CartButtonDown">Checkout</Link>
                         </div>
                     </div>
                 </div>

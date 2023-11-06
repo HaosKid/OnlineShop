@@ -1,8 +1,35 @@
 import Roata from '../../assets/Roata1.svg'
+import MainPageFooter from "../MainPage/MainPageFooter";
+import ShopPageAds from "./ShopPageAds";
+import ShopPageFilter from "./ShopPageFilter";
+import ShopPageHeader from "./ShopPageHeader";
+// import ShopPageItems from "./ShopPageItems";
+
+import RedOil from '../../assets/ShellEngineOilRed.svg'
+import CremOil from '../../assets/ShellEngineOilCrem.svg'
+import BlackOil from '../../assets/ShellEngineOilBlack.svg'
 import DelImg from '../../assets/CartDelButtonImg.svg'
 import { useState } from 'react'
-export default function CartBody(){
+import { Link } from 'react-router-dom';
+export default function CartBody({cart, setCart}){
     const [quantity, setQuantity] = useState(1)
+
+    var cartStorage = JSON.parse(localStorage.getItem('cart'))
+    console.log(cartStorage)
+    var total = 0
+    function DelCartItems(ids: number){
+
+        const deleteItemFromCart = cartStorage.filter(product  => product.id !== ids)
+        setCart(deleteItemFromCart)
+        localStorage.setItem('cart', JSON.stringify(deleteItemFromCart))
+        //const index = cartStorage.filter(product  => product.id !== ids)
+        //setCart(index)
+        //localStorage.setItem('cart', JSON.stringify(index))
+        
+
+    }
+    
+
     return(
         <main className="CartBodyContainer">
             <article className="CartBodyLeft">
@@ -20,11 +47,14 @@ export default function CartBody(){
                         Subtotal
                     </p>
                 </div>
-                <div className="CartBodyListItems">
-                    <img src={Roata} alt="Tire image" className='CartItemImg'/>
+                {cartStorage.map((product: any) =>{
+                    total = total + product.price
+                    return (
+                        <div className="CartBodyListItems">
+                    <img src={product.img} alt={product.alt} className='CartItemImg'/>
                     <div className="CartItemItemTextContainer">
-                        <p className="CartItemName">MIRAGE ...</p>
-                        <p className="CartItemPrice">250€</p>
+                        <p className="CartItemName">{product.alt}</p>
+                        <p className="CartItemPrice">{product.price} €</p>
                         <div className="CartQuantityItemContainer">
                             <button className="NoBdBg" onClick={() => (quantity <= 1)? null : setQuantity(quantity - 1)}>
                                 -
@@ -36,10 +66,12 @@ export default function CartBody(){
                                 +
                             </button>
                         </div>
-                        <p className="CartItemTotalPrice">250€</p>
-                        <button className='CartItemDelButton NoBdBg'><img src={DelImg} alt="Delete Button" className='deleteCartItemImg'/></button>
+                        <p className="CartItemTotalPrice">{product.price} €</p>
+                        <button className='CartItemDelButton NoBdBg' onClick={() =>DelCartItems(product.id)}><img src={DelImg} alt="Delete Button" className='deleteCartItemImg'/></button>
                     </div>
                 </div>
+                    )
+                })}
             </article>
             <article className="CartBodyRight">
                 <h2 className="CartTitle">
@@ -56,16 +88,16 @@ export default function CartBody(){
                     </div>
                     <div className="CartBodyRightItem">
                         <p className="CartBodyRightPrice1">
-                            250€
+                            {total}€
                         </p>
                         <p className="CartBodyRightPrice2">
-                            250€
+                            {total}€
                         </p>
                     </div>
                 </div>
-                <button className='CartCheckoutButton NoBdBg'>
+                <Link to='/Checkout' className='CartCheckoutButton NoBdBg'>
                     Check Out
-                </button>
+                </Link>
             </article>
         </main>
     )

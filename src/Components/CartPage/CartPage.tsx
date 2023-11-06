@@ -6,12 +6,12 @@ import CartHeader from "./CartHeader";
 
 
 
-export default function CartPage(){
+export default function CartPage({cart, setCart}){
     return(
         <>
         
         <CartHeader />
-        <CartBody />
+        <CartBody cart = {cart} setCart={setCart}/>
         <ShopPageAds />
         <MainPageFooter />
         </>

@@ -1,6 +1,8 @@
+import { products } from "../Shop/ShopPage"
 
 
 export default function CheckoutBilling() {
+    var cartStorage = JSON.parse(localStorage.getItem('cart'))
     return(
         <main className="CheckoutBillingContainer">
             <section className="Billing">
@@ -60,9 +62,14 @@ export default function CheckoutBilling() {
                         <h2 className="BillingProductDetailsTitle">
                             Product
                         </h2>
-                        <p className="BillingProductDetailsName">
-                            MIRAGE MR-AT172 285/65 <b>x 1</b>
-                        </p>
+                        {cartStorage.map((product: any) =>{
+                            return(
+                                <p className="BillingProductDetailsName">
+                                    {product.alt} <b>x 1</b>
+                                </p>
+                            )
+                        })}
+                        
                         <p className="BillingProductDetailsTotal">Subtotal</p>
                         <p className="BillingProductDetailsTotal">Total</p>
                     </div>
