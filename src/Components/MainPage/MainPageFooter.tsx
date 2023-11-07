@@ -10,7 +10,7 @@ export default function MainPageFooter(){
                         <p className="FooterLinkTitle">
                             Links
                         </p>
-                        <Link to="/Home" className="FooterLinkItem">Home</Link>
+                        <Link to="/" className="FooterLinkItem">Home</Link>
                         <Link to="/Shop" className="FooterLinkItem">Shop</Link>
                         <Link to="/Contact" className="FooterLinkItem">Contact</Link>
                     </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ShellEngineOil from '../../assets/ShellEngineOil.svg'
 export default function MainPageNewArrivals(){
     return (
@@ -10,7 +11,7 @@ export default function MainPageNewArrivals(){
                 <h2 className="NewArrivalTitle">
                     Shell Engine Oil
                 </h2>
-                <button className="NewArrivalButton">Shop Now</button>
+                <Link to='/Shop' className="NewArrivalButton">Shop Now</Link>
             </div>
             </div>
         </article>
